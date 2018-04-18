@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 /**
- * @author Priyanka
+ * @author suresh
  */
 
 class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
@@ -55,18 +55,18 @@ class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
             HashMap<String, String> googlePlace = nearbyPlaceList.get(i);
 
             String placeName = googlePlace.get("place_name");
-            String vicinity = googlePlace.get("vicinity");
+//            String vicinity = googlePlace.get("vicinity");
             double lat = Double.parseDouble( googlePlace.get("lat"));
             double lng = Double.parseDouble( googlePlace.get("lng"));
 
             LatLng latLng = new LatLng( lat, lng);
             markerOptions.position(latLng);
-            markerOptions.title(placeName + " : "+ vicinity);
-            markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
+            markerOptions.title(placeName);
+            markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
 
             mMap.addMarker(markerOptions);
             mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-            mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
+            mMap.animateCamera(CameraUpdateFactory.zoomTo(12));
         }
     }
 }

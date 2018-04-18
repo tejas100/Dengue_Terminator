@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+
+
+
+
+    >
+
+
+
+    <item android:title="H o s p i t a l / p h a r m a c y ">
+        <menu>
+            <item
+
+                android:id="@+id/nav_share"
+                android:icon="@drawable/check"
+                android:title="L o g i n"
+
+                />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/about"
+                android:title="A b o u t    U s"
+
+                />
+        </menu>
+    </item>
+
+</menu>
